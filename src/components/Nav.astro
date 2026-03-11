@@ -1,0 +1,267 @@
+---
+const pathname = Astro.url.pathname;
+
+import logo from "../assets/logo.webp";
+
+function isActive(href: string): boolean {
+  if (href === "/") return pathname === "/" || pathname === "";
+  return pathname === href || pathname.startsWith(href + "/");
+}
+
+function isGroupActive(hrefs: string[]): boolean {
+  return hrefs.some((href) => isActive(href));
+}
+---
+
+<nav class="nav-inner">
+  <a class="nav-logo" href="/">
+    <img src={logo.src} alt="Pachamama" />
+  </a>
+  <button
+    class="nav-burger"
+    id="nav-burger"
+    aria-label="Menú"
+    aria-expanded="false"
+  >
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links" role="list">
+    <!-- Inicio -->
+    <li>
+      <a href="/" class={isActive("/") ? "active" : ""}>Inicio</a>
+    </li>
+
+    <!-- Servicios -->
+    <li
+      class={`nav-has-dropdown${isGroupActive(["/clean", "/pachamama-home"]) ? " group-active" : ""}`}
+    >
+      <button
+        class="nav-dropdown-trigger"
+        aria-expanded="false"
+        aria-haspopup="true"
+      >
+        Servicios
+        <svg
+          class="nav-arrow"
+          viewBox="0 0 10 6"
+          width="10"
+          height="6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"><path d="M1 1l4 4 4-4"></path></svg
+        >
+      </button>
+      <ul class="nav-dropdown" role="list">
+        <li>
+          <a
+            href="/servicios/clean"
+            class={isActive("/servicios/clean") ? "active" : ""}
+            >Pachamama Clean</a
+          >
+        </li>
+        <li>
+          <a
+            href="/servicios/pachamama-home"
+            class={isActive("/servicios/pachamama-home") ? "active" : ""}
+            >Pachamama HomeCare</a
+          >
+        </li>
+      </ul>
+    </li>
+
+    <!-- Click & Go -->
+    <li
+      class={`nav-has-dropdown${isGroupActive(["/click-and-go/click-and-go", "/click-and-go/experiencia"]) ? " group-active" : ""}`}
+    >
+      <button
+        class="nav-dropdown-trigger"
+        aria-expanded="false"
+        aria-haspopup="true"
+      >
+        Click &amp; Go
+        <svg
+          class="nav-arrow"
+          viewBox="0 0 10 6"
+          width="10"
+          height="6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"><path d="M1 1l4 4 4-4"></path></svg
+        >
+      </button>
+      <ul class="nav-dropdown" role="list">
+        <li>
+          <a
+            href="/click-and-go/click-and-go"
+            class={isActive("/click-and-go/click-and-go") ? "active" : ""}
+            >El coche Click &amp; Go</a
+          >
+        </li>
+        <li>
+          <a
+            href="/click-and-go/experiencia"
+            class={isActive("/click-and-go/experiencia") ? "active" : ""}
+            >Experiencia Click &amp; Go</a
+          >
+        </li>
+      </ul>
+    </li>
+
+    <!-- Beneficios -->
+    <li
+      class={`nav-has-dropdown${isGroupActive(["/beneficios/pachamama-club", "/beneficios/garantia-viva"]) ? " group-active" : ""}`}
+    >
+      <button
+        class="nav-dropdown-trigger"
+        aria-expanded="false"
+        aria-haspopup="true"
+      >
+        Beneficios
+        <svg
+          class="nav-arrow"
+          viewBox="0 0 10 6"
+          width="10"
+          height="6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"><path d="M1 1l4 4 4-4"></path></svg
+        >
+      </button>
+      <ul class="nav-dropdown" role="list">
+        <li>
+          <a
+            href="/beneficios/pachamama-club"
+            class={isActive("/beneficios/pachamama-club") ? "active" : ""}
+            >Pachamama Club</a
+          >
+        </li>
+        <li>
+          <a
+            href="/beneficios/garantia-viva"
+            class={isActive("/beneficios/garantia-viva") ? "active" : ""}>Pachamama Viva</a
+          >
+        </li>
+      </ul>
+    </li>
+
+    <!-- Nosotros -->
+    <li>
+      <a href="/nosotros" class={isActive("/nosotros") ? "active" : ""}
+        >Nosotros</a
+      >
+    </li>
+
+    <!-- FAQ -->
+    <li>
+      <a href="/faq" class={isActive("/faq") ? "active" : ""}
+        >Preguntas frecuentes</a
+      >
+    </li>
+
+    <!-- Contacto CTA -->
+    <li>
+      <a
+        href="/contacto"
+        class={`nav-cta${isActive("/contacto") ? " active" : ""}`}
+        >Contacto y puntos de atención</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<script>
+  const burger = document.getElementById("nav-burger");
+  const navLinks = document.getElementById("nav-links");
+
+  if (burger && navLinks) {
+    burger.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      burger.classList.toggle("active", isOpen);
+      burger.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navLinks.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        burger.classList.remove("active");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  // ─── Dropdown menus (mobile click-toggle only) ─────────────
+  document
+    .querySelectorAll<HTMLElement>(".nav-has-dropdown")
+    .forEach((item) => {
+      const trigger = item.querySelector<HTMLButtonElement>(
+        ".nav-dropdown-trigger",
+      );
+      if (!trigger) return;
+
+      trigger.addEventListener("click", (e) => {
+        // On desktop (≥901px) CSS :hover handles the dropdown — skip JS toggle
+        if (window.innerWidth >= 901) return;
+        e.stopPropagation();
+        const isOpen = item.classList.toggle("open");
+        trigger.setAttribute("aria-expanded", String(isOpen));
+
+        // Close other open dropdowns
+        document
+          .querySelectorAll<HTMLElement>(".nav-has-dropdown")
+          .forEach((other) => {
+            if (other !== item) {
+              other.classList.remove("open");
+              other
+                .querySelector<HTMLButtonElement>(".nav-dropdown-trigger")
+                ?.setAttribute("aria-expanded", "false");
+            }
+          });
+      });
+    });
+
+  // Close dropdowns when clicking outside (desktop only)
+  document.addEventListener("click", () => {
+    if (window.innerWidth < 901) return;
+    document
+      .querySelectorAll<HTMLElement>(".nav-has-dropdown")
+      .forEach((item) => {
+        item.classList.remove("open");
+        item
+          .querySelector<HTMLButtonElement>(".nav-dropdown-trigger")
+          ?.setAttribute("aria-expanded", "false");
+      });
+  });
+
+  // ─── Nav scroll shadow ─────────────────────────────────────
+  const nav = document.getElementById("site-nav");
+  if (nav) {
+    const onScroll = () =>
+      nav.classList.toggle("scrolled", window.scrollY > 12);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  // ─── Fade-in on scroll ─────────────────────────────────────
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 },
+  );
+
+  document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+</script>

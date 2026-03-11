@@ -1,0 +1,727 @@
+---
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<!-- ─── 1. HERO ──────────────────────────────────────────── -->
+	<section class="hero section--alt">
+		<div class="container">
+			<div class="split hero__split">
+				<div class="split__text">
+					<span class="eyebrow fade-in"
+						>Pachamama Clean · Bogotá y Medellín</span
+					>
+					<h1 class="hero__headline fade-in fade-in-delay-1">
+						<span class="h1-span"
+							>Tu bebé pasa horas en su coche.</span
+						><br />
+						¿Estás seguro de que está realmente limpio?
+					</h1>
+					<p class="hero__sub fade-in fade-in-delay-2">
+						Spa especializado en limpieza profunda, desinfección
+						UV‑C y mantenimiento técnico para coches de bebé, sillas
+						de carro, corrales y artículos infantiles en Bogotá y
+						Medellín.
+					</p>
+					<p class="fade-in fade-in-delay-2">
+						En Pachamama Clean cuidamos los artículos que acompañan
+						la vida diaria de las familias. Nuestro proceso combina
+						desarme técnico, lavado profundo, desinfección en cabina
+						UV-C y mantenimiento especializado, devolviendo a los
+						artículos mejor apariencia, mejor funcionamiento y más
+						vida útil.
+					</p>
+					<div class="tag-row fade-in fade-in-delay-3">
+						<span class="mini-badge"
+							>25.000+ artículos procesados</span
+						>
+						<span class="mini-badge"
+							>13.000+ familias atendidas</span
+						>
+						<span class="mini-badge">8 años de experiencia</span>
+					</div>
+					<div class="note-box fade-in fade-in-delay-3">
+						<p>
+							<strong
+								>¿No sabes qué servicio necesita tu artículo?</strong
+							><br />Envíanos una foto por WhatsApp y te
+							orientamos en minutos.
+						</p>
+					</div>
+					<div class="btn-group mt-lg fade-in fade-in-delay-4">
+						<a
+							href="https://wa.me/?text=Hola%20Pachamama%2C%20quiero%20enviar%20una%20foto%20de%20mi%20art%C3%ADculo%20para%20orientaci%C3%B3n."
+							class="whatsapp-btn">Enviar foto por WhatsApp</a
+						>
+						<a href="#proceso-clean" class="btn btn-outline"
+							>Ver cómo funciona</a
+						>
+					</div>
+				</div>
+				<div class="fade-in fade-in-delay-2">
+					<div
+						class="img-placeholder"
+						style="aspect-ratio: 1/1;"
+						data-label="Técnico limpiando ruedas y desarmando coche"
+					>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 2. AUTORIDAD Y SEGURIDAD ─────────────────────────── -->
+	<section class="section" style="border-top: 1px solid var(--gray-200);">
+		<div class="container">
+			<div class="split">
+				<div class="split__text">
+					<span class="eyebrow fade-in">Autoridad técnica</span>
+					<h2 class="fade-in fade-in-delay-1">
+						El cuidado de artículos de bebé también es un tema de
+						seguridad
+					</h2>
+					<div class="divider fade-in fade-in-delay-2"></div>
+					<p class="fade-in fade-in-delay-2">
+						Muchos artículos infantiles pueden lavarse en casa, pero
+						productos como coches de bebé o sillas de auto están
+						diseñados con estructuras y mecanismos que requieren un
+						armado correcto para garantizar su funcionamiento y
+						seguridad.
+					</p>
+					<p class="mt-md fade-in fade-in-delay-3">
+						En Pachamama, los artículos son intervenidos y
+						ensamblados por técnicos especializados en productos
+						infantiles, lo que permite asegurar que el artículo
+						quede correctamente armado y funcionando según las
+						condiciones para las que fue diseñado por el fabricante.
+					</p>
+				</div>
+				<div class="fade-in fade-in-delay-2">
+					<div
+						class="img-placeholder"
+						style="aspect-ratio: 4/5;"
+						data-label="Técnico ensamblando mecanismos"
+					>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 3. PRUEBA SOCIAL / CIFRAS ────────────────────────── -->
+	<section class="section section--alt">
+		<div class="container">
+			<div class="text-center mb-md">
+				<span class="eyebrow fade-in">Resultados</span>
+				<h2 class="fade-in fade-in-delay-1">
+					Más de 25.000 artículos de bebé restaurados en Bogotá y
+					Medellín
+				</h2>
+				<div class="divider divider--center fade-in fade-in-delay-2">
+				</div>
+				<p
+					class="lead mt-md fade-in fade-in-delay-2"
+					style="max-width: 860px; margin-left: auto; margin-right: auto;"
+				>
+					Durante ocho años hemos desarrollado un proceso técnico
+					especializado para limpiar, desinfectar y mantener artículos
+					infantiles que muchas familias no saben cómo tratar
+					correctamente en casa.
+				</p>
+			</div>
+			<div class="grid-4 mt-xl">
+				<div class="card--price fade-in fade-in-delay-1">
+					<div class="price-label">Indicador</div>
+					<div class="price-amount">25.000+</div>
+					<div class="price-name">Artículos procesados</div>
+				</div>
+				<div class="card--price fade-in fade-in-delay-2">
+					<div class="price-label">Indicador</div>
+					<div class="price-amount">13.000+</div>
+					<div class="price-name">Familias atendidas</div>
+				</div>
+				<div class="card--price fade-in fade-in-delay-3">
+					<div class="price-label">Indicador</div>
+					<div class="price-amount">8</div>
+					<div class="price-name">Años de operación</div>
+				</div>
+				<div class="card--price fade-in fade-in-delay-4">
+					<div class="price-label">Cobertura</div>
+					<div class="price-amount" style="font-size: 1.6rem;">Bogotá y Medellín</div>
+					<div class="price-name">Ciudades principales</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 4. ARTÍCULOS QUE TRATAMOS ────────────────────────── -->
+	<section class="section">
+		<div class="container">
+			<span class="eyebrow fade-in">Cobertura de servicio</span>
+			<h2 class="fade-in fade-in-delay-1">
+				Artículos que tratamos en Pachamama Clean
+			</h2>
+			<div class="divider fade-in fade-in-delay-2"></div>
+			<div class="grid-4 mt-lg">
+				<div class="service-card fade-in fade-in-delay-1">
+					<div class="img-placeholder" data-label="Coches de bebé">
+					</div>
+					<div class="service-card__body">
+						<h3 class="service-card__title">Coches de bebé</h3>
+					</div>
+				</div>
+				<div class="service-card fade-in fade-in-delay-2">
+					<div class="img-placeholder" data-label="Sillas de carro">
+					</div>
+					<div class="service-card__body">
+						<h3 class="service-card__title">
+							Sillas de carro (car seats)
+						</h3>
+					</div>
+				</div>
+				<div class="service-card fade-in fade-in-delay-3">
+					<div class="img-placeholder" data-label="Sillas huevito">
+					</div>
+					<div class="service-card__body">
+						<h3 class="service-card__title">Sillas huevito</h3>
+					</div>
+				</div>
+				<div class="service-card fade-in fade-in-delay-4">
+					<div class="img-placeholder" data-label="Corrales"></div>
+					<div class="service-card__body">
+						<h3 class="service-card__title">Corrales</h3>
+					</div>
+				</div>
+				<div class="service-card fade-in fade-in-delay-1">
+					<div class="img-placeholder" data-label="Colechos"></div>
+					<div class="service-card__body">
+						<h3 class="service-card__title">Colechos</h3>
+					</div>
+				</div>
+				<div class="service-card fade-in fade-in-delay-2">
+					<div class="img-placeholder" data-label="Portabebés"></div>
+					<div class="service-card__body">
+						<h3 class="service-card__title">Portabebés</h3>
+					</div>
+				</div>
+				<div class="service-card fade-in fade-in-delay-3">
+					<div class="img-placeholder" data-label="Mecedoras"></div>
+					<div class="service-card__body">
+						<h3 class="service-card__title">Mecedoras</h3>
+					</div>
+				</div>
+				<div class="service-card fade-in fade-in-delay-4">
+					<div
+						class="img-placeholder"
+						data-label="Textiles infantiles"
+					>
+					</div>
+					<div class="service-card__body">
+						<h3 class="service-card__title">Textiles infantiles</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 5. PROCESO ───────────────────────────────────────── -->
+	<section id="proceso-clean" class="section section--alt">
+		<div class="container">
+			<div class="text-center mb-md">
+				<span class="eyebrow fade-in">Proceso técnico</span>
+				<h2 class="fade-in fade-in-delay-1">Mucho más que un lavado</h2>
+				<div class="divider divider--center fade-in fade-in-delay-2">
+				</div>
+				<p class="lead mt-md fade-in fade-in-delay-2">
+					Cada artículo pasa por un proceso técnico de limpieza
+					profunda, desinfección y mantenimiento especializado.
+				</p>
+			</div>
+			<div class="steps mt-lg fade-in fade-in-delay-2">
+				<div class="step">
+					<div class="step__num">1</div>
+					<div class="step__content">
+						<h4>Inspección inicial</h4>
+						<p>
+							Evaluamos estado general, textiles, ruedas,
+							rodamientos y mecanismos.
+						</p>
+					</div>
+				</div>
+				<div class="step">
+					<div class="step__num">2</div>
+					<div class="step__content">
+						<h4>Desarme técnico</h4>
+						<p>
+							Se desmontan piezas para acceder a zonas difíciles.
+						</p>
+					</div>
+				</div>
+				<div class="step">
+					<div class="step__num">3</div>
+					<div class="step__content">
+						<h4>Lavado profundo</h4>
+						<p>
+							Se limpian textiles, chasis, ruedas y piezas
+							plásticas.
+						</p>
+					</div>
+				</div>
+				<div class="step">
+					<div class="step__num">4</div>
+					<div class="step__content">
+						<h4>Mantenimiento de ruedas y rodamientos</h4>
+						<p>
+							Se retiran residuos como pelo, polvo y fibras
+							acumuladas. Posteriormente se lubrican los
+							rodamientos con aceite siliconado para mejorar su
+							funcionamiento.
+						</p>
+					</div>
+				</div>
+				<div class="step">
+					<div class="step__num">5</div>
+					<div class="step__content">
+						<h4>Revisión de mecanismos</h4>
+						<p>
+							Se revisan frenos, sistemas de plegado y uniones
+							móviles.
+						</p>
+					</div>
+				</div>
+				<div class="step">
+					<div class="step__num">6</div>
+					<div class="step__content">
+						<h4>Desinfección en cabina UV‑C</h4>
+						<p>
+							Los artículos pasan por una cabina de luz
+							ultravioleta que ayuda a reducir microorganismos
+							presentes en superficies textiles y plásticas.
+						</p>
+					</div>
+				</div>
+				<div class="step">
+					<div class="step__num">7</div>
+					<div class="step__content">
+						<h4>Reensamble técnico y control final</h4>
+						<p>
+							El artículo se arma nuevamente y se realiza una
+							revisión final de funcionamiento.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="grid-4 mt-xl">
+				<div class="img-placeholder fade-in" data-label="Desarme"></div>
+				<div
+					class="img-placeholder fade-in fade-in-delay-1"
+					data-label="Lavado"
+				>
+				</div>
+				<div
+					class="img-placeholder fade-in fade-in-delay-2"
+					data-label="Ruedas y rodamientos"
+				>
+				</div>
+				<div
+					class="img-placeholder fade-in fade-in-delay-3"
+					data-label="Cabina UV-C"
+				>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 5b. SEÑALES ──────────────────────────────────────── -->
+	<section class="section">
+		<div class="container">
+			<div class="split">
+				<div class="split__text">
+					<span class="eyebrow fade-in">¿Es tu momento?</span>
+					<h2 class="fade-in fade-in-delay-1">
+						¿Tu coche de bebé necesita limpieza o mantenimiento?
+					</h2>
+					<div class="divider fade-in fade-in-delay-2"></div>
+					<p class="fade-in fade-in-delay-2">
+						Muchas familias nos escriben cuando comienzan a notar
+						ciertas señales en sus coches de bebé o artículos
+						infantiles.
+					</p>
+					<ul class="check-list mt-md fade-in fade-in-delay-3">
+						<li>Las ruedas ya no giran suavemente</li>
+						<li>El coche hace ruido al empujarlo</li>
+						<li>Las telas tienen manchas difíciles</li>
+						<li>El coche estuvo guardado durante meses o años</li>
+						<li>Quieres reutilizarlo para un segundo bebé</li>
+						<li>El coche se ensució en un viaje o aeropuerto</li>
+						<li>El coche ya no se siente limpio o higiénico</li>
+					</ul>
+					<div class="note-box mt-md fade-in fade-in-delay-4">
+						<p>
+							Envíanos una foto por WhatsApp y te orientamos en
+							minutos.
+						</p>
+					</div>
+				</div>
+				<div class="fade-in fade-in-delay-2">
+					<div
+						class="img-placeholder"
+						style="aspect-ratio: 4/5;"
+						data-label="Ruedas desgastadas y telas manchadas"
+					>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 6. SEGUNDA VIDA ──────────────────────────────────── -->
+	<section class="section">
+		<div class="container">
+			<div class="split split--reverse">
+				<div class="split__text">
+					<span class="eyebrow fade-in">Reutilización consciente</span
+					>
+					<h2 class="fade-in fade-in-delay-1">
+						Darle una segunda oportunidad a los artículos de bebé
+					</h2>
+					<div class="divider fade-in fade-in-delay-2"></div>
+					<p class="fade-in fade-in-delay-2">
+						Muchas familias guardan coches de bebé o sillas después
+						del primer hijo.
+					</p>
+					<p class="mt-md fade-in fade-in-delay-3">
+						Nuestro servicio permite recuperarlos para que puedan
+						volver a utilizarse con un segundo bebé o incluso ser
+						regalados a otra familia.
+					</p>
+					<p class="mt-md fade-in fade-in-delay-3">
+						Además de ahorrar dinero, esta práctica ayuda a extender
+						la vida útil de los productos y reducir el impacto
+						ambiental que generan los artículos infantiles cuando se
+						desechan prematuramente.
+					</p>
+				</div>
+				<div class="fade-in fade-in-delay-2">
+					<div
+						class="img-placeholder"
+						style="aspect-ratio: 4/5;"
+						data-label="Coche restaurado"
+					>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 7. CASOS DE CONTACTO ─────────────────────────────── -->
+	<section class="section section--alt">
+		<div class="container">
+			<span class="eyebrow fade-in">Casos frecuentes</span>
+			<h2 class="fade-in fade-in-delay-1">
+				Situaciones en las que muchas familias nos buscan
+			</h2>
+			<div class="divider fade-in fade-in-delay-2"></div>
+			<div class="grid-3 mt-lg">
+				<div class="card fade-in fade-in-delay-1">
+					<h3 class="service-card__title">Uso diario del coche</h3>
+				</div>
+				<div class="card fade-in fade-in-delay-2">
+					<h3 class="service-card__title">
+						Viajes frecuentes con el bebé
+					</h3>
+				</div>
+				<div class="card fade-in fade-in-delay-3">
+					<h3 class="service-card__title">
+						Salidas al parque o a la finca
+					</h3>
+				</div>
+				<div class="card fade-in fade-in-delay-1">
+					<h3 class="service-card__title">
+						Suciedad causada en aeropuertos
+					</h3>
+				</div>
+				<div class="card fade-in fade-in-delay-2">
+					<h3 class="service-card__title">
+						Coches guardados durante meses
+					</h3>
+				</div>
+				<div class="card fade-in fade-in-delay-3">
+					<h3 class="service-card__title">
+						Preparación para un segundo bebé
+					</h3>
+				</div>
+			</div>
+			<div class="grid-3 mt-lg">
+				<div
+					class="img-placeholder fade-in"
+					style="aspect-ratio: 4/3;"
+					data-label="Coche sucio por viaje"
+				>
+				</div>
+				<div
+					class="img-placeholder fade-in fade-in-delay-1"
+					style="aspect-ratio: 4/3;"
+					data-label="Coche en parque"
+				>
+				</div>
+				<div
+					class="img-placeholder fade-in fade-in-delay-2"
+					style="aspect-ratio: 4/3;"
+					data-label="Coche restaurado"
+				>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 8. TESTIMONIOS ───────────────────────────────────── -->
+	<section class="section">
+		<div class="container">
+			<div class="text-center mb-md">
+				<span class="eyebrow fade-in">Testimonios</span>
+				<h2 class="fade-in fade-in-delay-1">
+					Lo que dicen las familias que confían en Pachamama
+				</h2>
+				<div class="divider divider--center fade-in fade-in-delay-2">
+				</div>
+			</div>
+			<div class="grid-3 mt-lg">
+				<div class="card fade-in fade-in-delay-1">
+					<p>
+						“Mandé a limpiar el coche de mi bebé y quedó como
+						nuevo.”
+					</p>
+					<p class="mt-sm text-muted">Mariana — Chapinero Alto</p>
+				</div>
+				<div class="card fade-in fade-in-delay-2">
+					<p>
+						“La silla del carro quedó impecable y perfectamente
+						armada.”
+					</p>
+					<p class="mt-sm text-muted">Elena — Rosales</p>
+				</div>
+				<div class="card fade-in fade-in-delay-3">
+					<p>“Las ruedas volvieron a girar perfecto.”</p>
+					<p class="mt-sm text-muted">Andrea — Chicó</p>
+				</div>
+				<div class="card fade-in fade-in-delay-1">
+					<p>“Recuperé el coche para mi segundo bebé.”</p>
+					<p class="mt-sm text-muted">Alejandra — Santa Paula</p>
+				</div>
+				<div class="card fade-in fade-in-delay-2">
+					<p>“Viajo mucho y siempre lo llevo a Pachamama.”</p>
+					<p class="mt-sm text-muted">Sofía — La Carolina</p>
+				</div>
+				<div class="card fade-in fade-in-delay-3">
+					<p>“Servicio muy profesional.”</p>
+					<p class="mt-sm text-muted">Patricia — Cedritos</p>
+				</div>
+				<div class="card fade-in fade-in-delay-1">
+					<p>“El coche quedó como nuevo.”</p>
+					<p class="mt-sm text-muted">Viviana — Laureles</p>
+				</div>
+				<div class="card fade-in fade-in-delay-2">
+					<p>“Me dio mucha confianza cómo lo armaron.”</p>
+					<p class="mt-sm text-muted">Carolina — Envigado</p>
+				</div>
+				<div class="card fade-in fade-in-delay-3">
+					<p>“Lo recuperaron completamente.”</p>
+					<p class="mt-sm text-muted">Carlos — El Poblado</p>
+				</div>
+			</div>
+			<div class="grid-3 mt-lg">
+				<div class="card fade-in fade-in-delay-1">
+					<p>“La silla quedó impecable.”</p>
+					<p class="mt-sm text-muted">Juan — Sabaneta</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 9. CLICK & GO ────────────────────────────────────── -->
+	<section class="section section--alt">
+		<div class="container">
+			<div class="split">
+				<div class="split__text">
+					<span class="eyebrow fade-in">Nuestro coche</span>
+					<h2 class="fade-in fade-in-delay-1">Click &amp; Go</h2>
+					<div class="divider fade-in fade-in-delay-2"></div>
+					<p class="fade-in fade-in-delay-2">
+						Después de limpiar y reparar miles de coches de bebé
+						durante años, entendimos exactamente qué funciona y qué
+						no en el uso real de las familias.
+					</p>
+					<p class="mt-md fade-in fade-in-delay-3">
+						Ese conocimiento técnico nos llevó a diseñar nuestro
+						propio coche:
+						<strong>Pachamama Click &amp; Go</strong>.
+					</p>
+					<p class="mt-md fade-in fade-in-delay-3">
+						Un coche compacto, práctico y diseñado para la vida
+						diaria de las familias que se mueven constantemente por
+						la ciudad y viajan con frecuencia.
+					</p>
+					<div class="mt-lg fade-in fade-in-delay-4">
+						<a href="click-and-go.html" class="btn btn-primary"
+							>Conocer Click &amp; Go</a
+						>
+					</div>
+				</div>
+				<div class="fade-in fade-in-delay-2">
+					<div
+						class="img-placeholder"
+						style="aspect-ratio: 4/5;"
+						data-label="Producto Click & Go"
+					>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 9b. EXPERIENCIA CLICK & GO ──────────────────────── -->
+	<section class="section">
+		<div class="container">
+			<div class="split split--reverse">
+				<div class="split__text">
+					<span class="eyebrow fade-in">Experiencia de prueba</span>
+					<h2 class="fade-in fade-in-delay-1">
+						No lo pruebes cinco minutos.<br />Vívelo cinco días.
+					</h2>
+					<div class="divider fade-in fade-in-delay-2"></div>
+					<p class="fade-in fade-in-delay-2">
+						La experiencia Click &amp; Go permite a las familias
+						probar el coche en su vida real antes de comprarlo.
+					</p>
+					<p class="mt-md fade-in fade-in-delay-3">
+						Podrás usarlo en tu rutina diaria durante varios días y
+						comprobar cómo se adapta a tu estilo de vida.
+					</p>
+					<ul class="check-list mt-md fade-in fade-in-delay-3">
+						<li>En tu carro</li>
+						<li>En tu apartamento</li>
+						<li>En tu ascensor</li>
+						<li>En restaurantes</li>
+						<li>En viajes</li>
+					</ul>
+					<p class="mt-md fade-in fade-in-delay-4">
+						<em
+							>Cinco minutos en una tienda no son suficientes para
+							saber si un coche realmente funciona para tu
+							familia.</em>
+					</p>
+				</div>
+				<div class="fade-in fade-in-delay-2">
+					<div
+						class="img-placeholder"
+						style="aspect-ratio: 4/5;"
+						data-label="Familia probando el Click & Go en su vida diaria"
+					>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 9c. PACHAMAMA VIVA ────────────────────────────────── -->
+	<section class="section section--alt">
+		<div class="container">
+			<div class="split">
+				<div class="split__text">
+					<span class="eyebrow fade-in">Beneficio exclusivo</span>
+					<h2 class="fade-in fade-in-delay-1">Pachamama Viva</h2>
+					<div class="divider fade-in fade-in-delay-2"></div>
+					<p class="fade-in fade-in-delay-2">
+						Los propietarios de Click &amp; Go reciben el beneficio
+						Pachamama Viva.
+					</p>
+					<p class="mt-md fade-in fade-in-delay-3">
+						Un servicio de limpieza profunda, desinfección y
+						mantenimiento técnico que permite extender la garantía
+						del coche seis meses adicionales.
+					</p>
+				</div>
+				<div class="fade-in fade-in-delay-2">
+					<div
+						class="img-placeholder"
+						style="aspect-ratio: 4/5;"
+						data-label="Garantía Pachamama Viva"
+					>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 10. PACHAMAMA CLUB ───────────────────────────────── -->
+	<section class="section">
+		<div class="container">
+			<div class="split split--reverse">
+				<div class="split__text">
+					<span class="eyebrow fade-in">Membresía</span>
+					<h2 class="fade-in fade-in-delay-1">Pachamama Club</h2>
+					<div class="divider fade-in fade-in-delay-2"></div>
+					<p class="fade-in fade-in-delay-2">
+						Los propietarios de Click &amp; Go también hacen parte
+						del Pachamama Club.
+					</p>
+					<ul class="check-list mt-md fade-in fade-in-delay-3">
+						<li>Extensión de garantía Pachamama Viva</li>
+						<li>20% de descuento en servicios Pachamama</li>
+						<li>
+							Beneficios exclusivos para propietarios Click &amp;
+							Go
+						</li>
+					</ul>
+				</div>
+				<div class="fade-in fade-in-delay-2">
+					<div class="grid-2">
+						<div class="card text-center">
+							<h3 class="service-card__title">+6 meses</h3>
+							<p>Garantía Viva</p>
+						</div>
+						<div class="card text-center">
+							<h3 class="service-card__title">20% OFF</h3>
+							<p>Servicios Pachamama</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── 11. CTA FINAL ────────────────────────────────────── -->
+	<section class="section section--olive">
+		<div class="container text-center">
+			<span class="eyebrow fade-in">Agenda hoy</span>
+			<h2 class="fade-in fade-in-delay-1">
+				Recupera el artículo que tu bebé usa todos los días
+			</h2>
+			<p
+				class="lead mt-md fade-in fade-in-delay-2"
+				style="max-width: 780px; margin-left: auto; margin-right: auto;"
+			>
+				Si tu coche de bebé, silla de auto o corral necesita limpieza
+				profunda o mantenimiento especializado, nuestro equipo está
+				listo para ayudarte en Bogotá y Medellín.
+			</p>
+			<div class="mt-lg fade-in fade-in-delay-3">
+				<a
+					href="https://wa.me/?text=Hola%20Pachamama%2C%20quiero%20agendar%20mi%20servicio%20de%20limpieza%20y%20mantenimiento."
+					class="whatsapp-btn">Agendar servicio por WhatsApp</a
+				>
+			</div>
+			<p
+				class="mt-md fade-in fade-in-delay-4"
+				style="color: rgba(255,255,255,0.82);"
+			>
+				Envíanos una foto y te orientamos rápidamente.
+			</p>
+		</div>
+	</section>
+</Layout>

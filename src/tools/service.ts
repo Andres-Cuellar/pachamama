@@ -1,0 +1,1 @@
+export const numberWp = 573108696543;
