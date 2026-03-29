@@ -32,6 +32,8 @@ import click3 from "../assets/image/click-and-go/3.webp";
 import click4 from "../assets/image/click-and-go/4.webp";
 import click5 from "../assets/image/click-and-go/5.webp";
 import click6 from "../assets/image/click-and-go/6.webp";
+import experienciaCag from "../assets/image/experiencia-c-a-g.webp";
+import pachamamaViva from "../assets/image/pachamama-viva.webp";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -745,11 +747,12 @@ import click6 from "../assets/image/click-and-go/6.webp";
 					</p>
 				</div>
 				<div class="fade-in fade-in-delay-2">
-					<div
-						class="img-placeholder"
-						style="aspect-ratio: 4/5;"
-						data-label="Familia probando el Click & Go en su vida diaria"
-					>
+					<div class="service-card__media" style="aspect-ratio: 4/5;">
+						<img
+							src={experienciaCag.src}
+							alt="Familia probando el Click & Go en su vida diaria"
+							loading="lazy"
+						/>
 					</div>
 				</div>
 			</div>
@@ -775,11 +778,12 @@ import click6 from "../assets/image/click-and-go/6.webp";
 					</p>
 				</div>
 				<div class="fade-in fade-in-delay-2">
-					<div
-						class="img-placeholder"
-						style="aspect-ratio: 4/5;"
-						data-label="Garantía Pachamama Viva"
-					>
+					<div class="service-card__media" style="aspect-ratio: 4/5;">
+						<img
+							src={pachamamaViva.src}
+							alt="Garantia Pachamama Viva"
+							loading="lazy"
+						/>
 					</div>
 				</div>
 			</div>
