@@ -1,5 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import porQueImporta from "../../assets/clean/por-que-importa.webp";
+import seguridad from "../../assets/clean/seguridad.webp";
+
 ---
 
 <Layout>
@@ -47,6 +50,15 @@ import Layout from "../../layouts/Layout.astro";
             higiénico para el bebé. Por eso nuestro proceso combina limpieza
             profunda y desinfección UV‑C.
           </p>
+        </div>
+        <div class="fade-in fade-in-delay-2">
+          <div class="service-card__media" style="aspect-ratio: 4/5;">
+            <img
+              src={porQueImporta.src}
+              alt="La limpieza profunda ayuda a crear un ambiente más higiénico para tu bebé"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -159,6 +171,15 @@ import Layout from "../../layouts/Layout.astro";
             especializados en productos infantiles, asegurando que el sistema
             funcione correctamente.
           </p>
+        </div>
+        <div class="fade-in fade-in-delay-2">
+          <div class="service-card__media" style="aspect-ratio: 4/5;">
+            <img
+              src={seguridad.src}
+              alt="La limpieza profunda ayuda a crear un ambiente más higiénico para tu bebé"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>

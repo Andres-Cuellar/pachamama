@@ -1,5 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import vida1 from "../../assets/image/click-and-go/para-tu-dia-a-dia/1.webp";
+import vida2 from "../../assets/image/click-and-go/para-tu-dia-a-dia/2.webp";
+import vida3 from "../../assets/image/click-and-go/para-tu-dia-a-dia/3.webp";
+import vida4 from "../../assets/image/click-and-go/para-tu-dia-a-dia/4.webp";
+import detallesTecnicos from "../../assets/image/click-and-go/detalles-tecnicos.webp";
+import origen from "../../assets/image/click-and-go/origen.webp";
+import membresia from "../../assets/image/click-and-go/membresia.webp";
 ---
 
 <Layout>
@@ -102,11 +109,28 @@ import Layout from "../../layouts/Layout.astro";
           </ul>
         </div>
         <div class="fade-in fade-in-delay-2">
-          <div
-            class="img-placeholder"
-            style="aspect-ratio: 4/5;"
-            data-label="Mamá en transporte urbano con Click & Go"
-          >
+          <div class="hero-slider hero-slider--manual" aria-label="Click & Go en la vida real">
+            <div class="hero-slider__slide is-active">
+              <img src={vida1.src} alt="Click & Go en uso diario" loading="lazy" />
+            </div>
+            <div class="hero-slider__slide">
+              <img src={vida2.src} alt="Click & Go en transporte" loading="lazy" />
+            </div>
+            <div class="hero-slider__slide">
+              <img src={vida3.src} alt="Click & Go en viaje" loading="lazy" />
+            </div>
+            <div class="hero-slider__slide">
+              <img src={vida4.src} alt="Click & Go en la ciudad" loading="lazy" />
+            </div>
+            <div class="hero-slider__badge">Vida real</div>
+            <div class="hero-slider__nav" aria-hidden="false">
+              <button class="hero-slider__btn hero-slider__btn--prev" type="button" aria-label="Imagen anterior">
+                <span aria-hidden="true">‹</span>
+              </button>
+              <button class="hero-slider__btn hero-slider__btn--next" type="button" aria-label="Imagen siguiente">
+                <span aria-hidden="true">›</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -155,11 +179,12 @@ import Layout from "../../layouts/Layout.astro";
           </ul>
         </div>
         <div class="fade-in fade-in-delay-1">
-          <div
-            class="img-placeholder"
-            style="aspect-ratio: 4/5;"
-            data-label="Click & Go en cabina de avión"
-          >
+          <div class="service-card__media" style="aspect-ratio: 4/5;">
+            <img
+              src={vida2.src}
+              alt="Click & Go en cabina de avión"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -187,11 +212,11 @@ import Layout from "../../layouts/Layout.astro";
           </ul>
         </div>
         <div class="fade-in fade-in-delay-2">
-          <div
-            class="img-placeholder"
-            style="aspect-ratio: 4/3;"
-            data-label="Todos los accesorios Click & Go"
-          >
+            <img
+              src={vida3.src}
+              alt="Todos los accesorios incluidos con Click & Go"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -232,12 +257,12 @@ import Layout from "../../layouts/Layout.astro";
             </ul>
           </div>
         </div>
-        <div class="fade-in fade-in-delay-2">
-          <div
-            class="img-placeholder"
-            style="aspect-ratio: 3/4;"
-            data-label="Click & Go — Catálogo fondo blanco"
-          >
+          <div class="fade-in fade-in-delay-2">
+            <img
+              src={detallesTecnicos.src}
+              alt="Detalles técnicos de Click & Go"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -390,12 +415,11 @@ import Layout from "../../layouts/Layout.astro";
           </ul>
         </div>
         <div class="fade-in fade-in-delay-1">
-          <div
-            class="img-placeholder"
-            style="aspect-ratio: 4/5;"
-            data-label="Coche en taller Pachamama"
-          >
-          </div>
+          <img
+              src={origen.src}
+              alt="Todos los accesorios incluidos con Click & Go"
+              loading="lazy"
+            />
         </div>
       </div>
     </div>
@@ -486,11 +510,12 @@ import Layout from "../../layouts/Layout.astro";
           </div>
         </div>
         <div class="fade-in fade-in-delay-2">
-          <div
-            class="img-placeholder"
-            style="aspect-ratio: 4/3;"
-            data-label="Pachamama Club — Beneficios"
-          >
+            <div class="fade-in fade-in-delay-2">
+            <img
+              src={membresia.src}
+              alt="Detalles técnicos de Click & Go"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -519,3 +544,26 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 </Layout>
+
+<script>
+  // Inicializar todos los sliders manuales
+  const sliders = document.querySelectorAll(".hero-slider--manual");
+
+  sliders.forEach((slider) => {
+    const slides = Array.from(slider.querySelectorAll(".hero-slider__slide"));
+    const prev = slider.querySelector(".hero-slider__btn--prev");
+    const next = slider.querySelector(".hero-slider__btn--next");
+    let index = slides.findIndex((slide) => slide.classList.contains("is-active"));
+
+    if (index < 0) index = 0;
+
+    const setActive = (nextIndex) => {
+      slides[index].classList.remove("is-active");
+      index = (nextIndex + slides.length) % slides.length;
+      slides[index].classList.add("is-active");
+    };
+
+    prev?.addEventListener("click", () => setActive(index - 1));
+    next?.addEventListener("click", () => setActive(index + 1));
+  });
+</script>

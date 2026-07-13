@@ -1,5 +1,14 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import servicioDomicilio from "../../assets/image/home-care/servicio-domicilio.webp";
+import equipo from "../../assets/image/home-care/equipo.webp";
+import tapete from "../../assets/image/home-care/tapete.webp";
+import sofaImg from "../../assets/image/home-care/cobertura/sofa.webp";
+import colchonImg from "../../assets/image/home-care/cobertura/colchon.webp";
+import sillaComedorImg from "../../assets/image/home-care/cobertura/silla-comedor.webp";
+import poltronaImg from "../../assets/image/home-care/cobertura/poltrona.webp";
+import cabeceraImg from "../../assets/image/home-care/cobertura/cabecera.webp";
+import tapeteImg from "../../assets/image/home-care/cobertura/tapete.webp";
 ---
 
 <Layout>
@@ -60,11 +69,13 @@ import Layout from "../../layouts/Layout.astro";
           </ul>
         </div>
         <div class="fade-in fade-in-delay-2">
-          <div
-            class="img-placeholder"
-            style="aspect-ratio: 4/5;"
-            data-label="Máquina de extracción en sofá"
-          ></div>
+          <div class="service-card__media" style="aspect-ratio: 4/5;">
+            <img
+              src={servicioDomicilio.src}
+              alt="Máquina de extracción profesional limpiando sofá en domicilio"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -167,12 +178,14 @@ import Layout from "../../layouts/Layout.astro";
             <li>Validación del personal antes de realizar servicios en domicilios</li>
           </ul>
         </div>
-        <div class="fade-in fade-in-delay-1">
-          <div
-            class="img-placeholder"
-            style="aspect-ratio: 4/5;"
-            data-label="Técnico Pachamama uniformado"
-          ></div>
+        <div class="fade-in fade-in-delay-2">
+          <div class="service-card__media" style="aspect-ratio: 4/5;">
+            <img
+              src={equipo.src}
+              alt="Equipo pachamama clean"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -194,42 +207,54 @@ import Layout from "../../layouts/Layout.astro";
       </div>
       <div class="grid-3 mt-xl">
         <div class="service-card fade-in fade-in-delay-1">
-          <div class="img-placeholder" data-label="Sofás"></div>
+          <div class="service-card__media">
+            <img src={sofaImg.src} alt="Limpieza profesional de sofás" loading="lazy" />
+          </div>
           <div class="service-card__body">
             <div class="service-card__title">Sofás</div>
             <p class="service-card__text">2 puestos, 3 puestos y modulares.</p>
           </div>
         </div>
         <div class="service-card fade-in fade-in-delay-2">
-          <div class="img-placeholder" data-label="Colchones"></div>
+          <div class="service-card__media">
+            <img src={colchonImg.src} alt="Limpieza profesional de colchones" loading="lazy" />
+          </div>
           <div class="service-card__body">
             <div class="service-card__title">Colchones</div>
             <p class="service-card__text">Sencillo, semidoble, doble y king.</p>
           </div>
         </div>
         <div class="service-card fade-in fade-in-delay-3">
-          <div class="img-placeholder" data-label="Sillas de comedor"></div>
+          <div class="service-card__media">
+            <img src={sillaComedorImg.src} alt="Limpieza profesional de sillas de comedor" loading="lazy" />
+          </div>
           <div class="service-card__body">
             <div class="service-card__title">Sillas de comedor</div>
             <p class="service-card__text">Tapizadas, por unidad.</p>
           </div>
         </div>
         <div class="service-card fade-in fade-in-delay-1">
-          <div class="img-placeholder" data-label="Poltronas"></div>
+          <div class="service-card__media">
+            <img src={poltronaImg.src} alt="Limpieza profesional de poltronas" loading="lazy" />
+          </div>
           <div class="service-card__body">
             <div class="service-card__title">Poltronas</div>
             <p class="service-card__text">Sillones individuales tapizados.</p>
           </div>
         </div>
         <div class="service-card fade-in fade-in-delay-2">
-          <div class="img-placeholder" data-label="Cabeceros"></div>
+          <div class="service-card__media">
+            <img src={cabeceraImg.src} alt="Limpieza profesional de cabeceros y apoyacabezas" loading="lazy" />
+          </div>
           <div class="service-card__body">
             <div class="service-card__title">Cabeceros y apoyacabezas</div>
             <p class="service-card__text">Tapizados de todo tipo.</p>
           </div>
         </div>
         <div class="service-card fade-in fade-in-delay-3">
-          <div class="img-placeholder" data-label="Tapetes"></div>
+          <div class="service-card__media">
+            <img src={tapeteImg.src} alt="Limpieza profesional de tapetes" loading="lazy" />
+          </div>
           <div class="service-card__body">
             <div class="service-card__title">Tapetes</div>
             <p class="service-card__text">Lavado en taller. Ver detalle abajo.</p>
@@ -265,13 +290,15 @@ import Layout from "../../layouts/Layout.astro";
             <li>Secado completo para evitar humedad y olores</li>
             <li>Entrega en 5 días hábiles</li>
           </ul>
-        </div>
-        <div class="fade-in fade-in-delay-2">
-          <div
-            class="img-placeholder"
-            style="aspect-ratio: 4/3;"
-            data-label="Tapete en taller Pachamama"
-          ></div>
+        </div>  
+      <div class="fade-in fade-in-delay-2">
+          <div class="service-card__media" style="aspect-ratio: 4/5;">
+            <img
+              src={tapete.src}
+              alt="Lavado de tapete"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>
